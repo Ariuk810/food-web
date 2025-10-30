@@ -1,6 +1,7 @@
 "use client";
 
 import { DownIcon } from "../icons/DownIcon";
+import { UpDown } from "../icons/UpDown";
 
 export const AdminCard = (props) => {
   const { customer, food, date, total, delivery, state, number } = props;
@@ -18,7 +19,12 @@ export const AdminCard = (props) => {
       <div></div>
       <p className="text-gray-500 w-[160px] ml-10">{total}</p>
       <p className="text-gray-500 w-[213px] ml-10 h-[56px]">{delivery}</p>
-      <p className="text-gray-500 w-[160px] ml-10"></p>
+      <div className="w-[160px]  ml-10">
+        <button className=" w-[94px] h-[32px] border border-red-600 rounded-2xl text-black flex items-center justify-center gap-2">
+          <p className="font-bold">Pending</p>
+          <UpDown />
+        </button>
+      </div>
       <div></div>
     </div>
   );

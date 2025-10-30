@@ -6,6 +6,7 @@ import { MenuIcon } from "../icons/Menu";
 import { NomNom } from "../icons/NomNom";
 import { OrderIcon } from "../icons/Order";
 import { UpDown } from "../icons/UpDown";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,10 +20,12 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center pt-10">
-          <button className="flex justify-center gap-3 cursor-pointer">
-            <MenuIcon />
-            <p>Food Menu</p>
-          </button>
+          <Link href={`admin/food`}>
+            <button className="flex justify-center gap-3 cursor-pointer">
+              <MenuIcon />
+              <p>Food Menu</p>
+            </button>
+          </Link>
         </div>
         <div className="flex justify-center pt-10">
           <button
@@ -70,14 +73,28 @@ export default function Home() {
         </div>
         <AdminCard
           number={1}
-          customer={"Test@gamil.com"}
+          customer={"Test@gmail.com"}
           food={"2 foods"}
           date={"2024/12/20"}
           total={"$26.97"}
-          delivery={
-            "2024/12/СБД, 12-р хороо, СБД нэгдсэн эмнэлэг Sbd negdsen emneleg | 100 айлын гүүрэн гарцны хойд талд 4д ногоонСБД, 12-р хороо, СБД нэгдсэн эмнэлэг Sbd negdsen emneleg | 100 айлын гүүрэн гарцны хойд талд 4д ногоон20"
-          }
+          delivery={"2024/12/СБД, 12-р хороо, СБД нэгдсэн эмнэлэг "}
+          state={""}
         />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
+        <AdminCard />
         <AdminCard />
         <AdminCard />
         <AdminCard />
