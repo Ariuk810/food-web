@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-gray-100 flex gap-[5%]">
+    <div className="bg-gray-100 flex gap-[1%]">
       <div className="w-[250px] h-screen bg-white">
         <div className="flex items-center gap-3 pt-5 justify-center">
           <NomNom />
@@ -38,10 +38,26 @@ export default function Home() {
           </div>
         </Link>
       </div>
-      <div className="bg-white w-[1171px] h-[176px] rounded-lg mt-[3%]">
-        <p className="font-bold text-2xl pt-3 pl-3">Dishes category</p>
-        <div className="w-[145px] h-[36px] border border-red-500 rounded-full flex justify-center items-center font-medium">
-          <p>All Dishes</p>
+      <div>
+        <div className="bg-white w-[1171px] h-auto rounded-lg mt-[8%]">
+          <p className="font-bold text-2xl pt-3 pl-3">Dishes category</p>
+          <div className="w-[145px] mt-3 ml-3 h-[36px] border border-red-500 rounded-full flex justify-center items-center font-medium">
+            <p>All Dishes</p>
+          </div>
+        </div>
+        <div className="bg-white w-[1171px] h-auto rounded-lg mt-[5%] pt-4 pl-4">
+          <div className="flex items-center ">
+            <p className="font-bold text-2xl text-black">Appetizers</p>
+            <p className="font-bold text-2xl text-black">(6)</p>
+          </div>
+          <div className="w-[270px] h-[241px] border-1 border-red-500 border-dashed rounded-lg flex flex-col items-center justify-center space-y-3">
+            <button className="bg-red-500 text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl">
+              +
+            </button>
+            <p class="text-center text-black font-medium">
+              Add new Dish to <br /> Appetizers
+            </p>
+          </div>
         </div>
       </div>
     </div>
