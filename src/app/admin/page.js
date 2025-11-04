@@ -29,7 +29,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center pt-10">
           <button
-            className={`w-[165px] h-[40px] rounded-full flex justify-center items-center gap-5 cursor-pointer ${
+            className={`w-[165px] h-10 rounded-full flex justify-center items-center gap-5 cursor-pointer ${
               true ? "bg-black text-white" : "bg-white text-black"
             }`}
           >
@@ -45,28 +45,28 @@ export default function Home() {
             <p className="text-gray-500">32 items</p>
           </div>
           <div className="flex items-center gap-3.5 pr-3.5">
-            <div className="w-[300px] h-[36px] border border-gray-300 rounded-full flex justify-center gap-3 items-center">
+            <div className="w-[300px] h-9 border border-gray-300 rounded-full flex justify-center gap-3 items-center">
               <DateIcon />
               <p>13 June 2023 - 14 July 2023</p>
             </div>
-            <button className="bg-gray-300 w-[179px] h-[36px] rounded-full text-white">
+            <button className="bg-gray-300 w-[179px] h-9 rounded-full text-white">
               Change delivery state
             </button>
           </div>
         </div>
-        <div className="border border-gray-100 w-full h-[56px] flex items-center ">
-          <button className="w-[20px] h-[20px] border border-black rounded-[5px] ml-3 "></button>
-          <p className="w-[56px] ml-10">№</p>
-          <p className="text-gray-500 w-[56px] ml-3">Customer</p>
+        <div className="border border-gray-100 w-full h-14 flex items-center ">
+          <button className="w-5 h-5 border border-black rounded-[5px] ml-3 "></button>
+          <p className="w-14 ml-10">№</p>
+          <p className="text-gray-500 w-14 ml-3">Customer</p>
           <p className="text-gray-500  w-[213px] ml-60 ">Food</p>
           <div></div>
-          <p className="text-gray-500 w-[160px] ml-10">Date</p>
+          <p className="text-gray-500 w-40 ml-10">Date</p>
           <div>
             <UpDown />
           </div>
-          <p className="text-gray-500 w-[160px] ml-10">Total</p>
+          <p className="text-gray-500 w-40 ml-10">Total</p>
           <p className="text-gray-500 w-[213px] ml-10">Delivery Address</p>
-          <p className="text-gray-500 w-[160px] ml-10">Delivery State</p>
+          <p className="text-gray-500 w-40 ml-10">Delivery State</p>
           <div>
             <UpDown />
           </div>
