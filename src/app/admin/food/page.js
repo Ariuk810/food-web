@@ -7,21 +7,18 @@ import { WhiteMenuIcon } from "@/app/icons/WhiteMenu";
 import Link from "next/link";
 import { FoodCard } from "@/app/_components/FoodCard";
 import { CategoryCard } from "@/app/_components/CategoryCard";
+import { AddCategory } from "@/app/_components/addCategory";
 
 const options = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NzZiMzEwNzJlZDg5ODcwMzQxM2Y0NzkyYzZjZTdjYyIsIm5iZiI6MTczODAyNjY5NS44NCwic3ViIjoiNjc5ODJlYzc3MDJmNDkyZjQ3OGY2OGUwIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.k4OF9yGrhA2gZ4VKCH7KLnNBB2LIf1Quo9c3lGF6toE",
   },
 };
 
 export default function Home() {
   const [categoryData, setCategoryData] = useState([]);
   const [foodInput, setFoodInput] = useState(false);
-  const [categoryinput, setCategoryInput] = useState(false);
-  const [newCategoryName, setNewCategoryName] = useState("");
 
   const apiLink = `http://localhost:1000/category`;
 
@@ -86,35 +83,7 @@ export default function Home() {
                 );
               })}
             </div>
-            <div className="pt-3 pl-3" onClick={() => setCategoryInput(true)}>
-              <button className="bg-red-500 text-white rounded-full w-9 h-9 flex item justify-center  text-2xl">
-                +
-              </button>
-            </div>
-            {categoryinput && (
-              <div className="fixed inset-0 flex items-center justify-center z-50 backdrop-blur-md">
-                <div className="bg-white rounded-2xl p-6 w-[460px] h-[272px] relative">
-                  <button
-                    onClick={() => setCategoryInput(false)}
-                    className="absolute top-3 right-3 text-gray-500 hover:text-black"
-                  >
-                    ✕
-                  </button>
-                  <h2 className="text-xl font-bold ">Add new category</h2>
-                  <div className="absolute top-25">
-                    <p>Category name</p>
-                    <input
-                      type="text"
-                      placeholder="Type Category Name"
-                      className="border border-gray-300 rounded-md px-3 py-2 w-[412px]"
-                    />
-                  </div>
-                  <button className="bg-black text-white rounded-md w-[123px] absolute top-50 left-80 py-2">
-                    Add category
-                  </button>
-                </div>
-              </div>
-            )}
+            <AddCategory />
           </div>
         </div>
         <div className="bg-white  h-auto rounded-lg mt-[5%] pt-4 pl-4">
