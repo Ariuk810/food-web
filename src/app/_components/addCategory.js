@@ -1,11 +1,15 @@
 "use client";
 import { useState } from "react";
 
-export const AddCategory = () => {
+export const AddCategory = ({ getData }) => {
   const [categoryinput, setCategoryInput] = useState(false);
   const [newCategoryName, setNewCategoryName] = useState("");
 
   const handleSubmit = async () => {
+    if (newCategoryName.length === 0) {
+      alert("Category bicheechee");
+      return;
+    }
     try {
       const res = await fetch("http://localhost:1000/category", {
         method: "POST",
@@ -17,6 +21,9 @@ export const AddCategory = () => {
           categoryName: newCategoryName,
         }),
       });
+
+      await getData();
+      setCategoryInput(false);
     } catch (err) {
       console.log(err);
     }
@@ -25,7 +32,7 @@ export const AddCategory = () => {
   return (
     <>
       <div className="pt-3 pl-3" onClick={() => setCategoryInput(true)}>
-        <button className="bg-red-500 text-white rounded-full w-9 h-9 flex item justify-center  text-2xl">
+        <button className="bg-red-500 text-white rounded-full w-9 h-9 flex  justify-center  text-2xl">
           +
         </button>
       </div>
