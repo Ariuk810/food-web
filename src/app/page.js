@@ -6,6 +6,7 @@ import { NomNom } from "./icons/NomNom";
 import { LocationIcon } from "./icons/Location";
 import { TbShoppingCartDollar } from "react-icons/tb";
 import { RiAdminFill } from "react-icons/ri";
+import { HomeFoodCard } from "./_components/HomeFoodCard";
 
 export default function Home() {
   const [admin, SetAdmin] = useState(false);
@@ -55,8 +56,17 @@ export default function Home() {
         </div>
       </div>
       <img src="/BG.png" />
-      <div className="bg-gray-600 w-screen h-screen">
-        <div className="w-[397px] h-[342px] bg-white "></div>
+      <div className="bg-gray-600 w-screen h-screen ">
+        <h3 className="font-bold text-3xl text-white flex pl-35 pt-15">
+          Appetizer
+        </h3>
+        <div className="flex flex-wrap gap-5 justify-center pt-15">
+          <HomeFoodCard />
+          <HomeFoodCard />
+          <HomeFoodCard />
+          <HomeFoodCard />
+          <HomeFoodCard />
+        </div>
       </div>
     </>
   );

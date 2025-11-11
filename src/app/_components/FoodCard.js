@@ -2,7 +2,8 @@
 
 import { EditIcon } from "../icons/Edit";
 
-export const FoodCard = () => {
+export const FoodCard = (props) => {
+  const { foodName } = props;
   return (
     <div className="w-[270px] h-[241px] border border-gray-200 rounded-2xl pl-4 pt-3 relative">
       <img src="/Hool.png" />
@@ -10,9 +11,7 @@ export const FoodCard = () => {
         <EditIcon />
       </button>
       <div className="flex  gap-10 pt-4">
-        <h3 className="text-red-500 font-medium text-sm ">
-          Brie Crostini Appetizer
-        </h3>
+        <h3 className="text-red-500 font-medium text-sm ">{foodName}</h3>
         <p className="text-sm font-semibold">$12.99</p>
       </div>
       <p className="text-gray-600 text-xs mt-1 leading-snug">

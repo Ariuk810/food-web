@@ -36,7 +36,7 @@ export default function Home() {
   }, []);
   return (
     <div className="bg-gray-100 flex gap-[1%]">
-      <div className="w-[250px] h-screen bg-white">
+      <div className="w-[250px] h-screen bg-white ">
         <div className="flex items-center gap-3 pt-5 justify-center">
           <NomNom />
           <div>
@@ -74,7 +74,7 @@ export default function Home() {
             <div className="w-[145px] mt-3 ml-3 h-9 border border-red-500 rounded-full flex justify-center items-center font-medium">
               <button>All Dishes</button>
             </div>
-            <div className="flex">
+            <div className="flex flex-wrap">
               {categoryData?.map((category, index) => {
                 return (
                   <CategoryCard
@@ -92,7 +92,7 @@ export default function Home() {
             <BigFoodCard
               key={index}
               categoryName={category.categoryName}
-              // categoryId={category._id}
+              categoryId={category._id}
             />
           ))}
         </div>
